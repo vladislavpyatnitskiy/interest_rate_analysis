@@ -5,6 +5,21 @@ Welcome to the repository! Here are collected scripts for analysing interest rat
 ![](https://github.com/vladislavpyatnitskiy/interest_rate_analysis/blob/main/Plots/Interest%20Rate%20Plot.png?raw=true)
 Fig. 1. Interest Rate Dynamics
 
+## Interest Rate Data & Analysis
+```
+head(cbr_interest_rate("18.11.2024", "28.10.2025"), 5)
+```
+### Time Series
+```
+GMT
+           Interest Rate
+2024-11-18            21
+2024-11-19            21
+2024-11-20            21
+2024-11-21            21
+2024-11-22            21
+```
+### Time Periods
 ```
    Interest Rate Start Date   End Date Days Held
 1           5.50 2013-09-17 2014-02-28       165
