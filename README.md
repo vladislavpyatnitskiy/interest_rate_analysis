@@ -84,3 +84,43 @@ GMT
 60         16.50 2025-10-27 2025-10-28         2
 ```
 Table 1. Historical Interest Rate Changes
+
+```
+$Regression
+$Regression$`Interest Rate`
+
+Call:
+lm(formula = r, data = d)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-8.948 -1.445 -0.290  1.188  9.270 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  4.167e+00  3.788e-01  11.001   <2e-16 ***
+Brent        4.279e-02  4.673e-03   9.155   <2e-16 ***
+Cocoa        8.881e-04  4.445e-05  19.983   <2e-16 ***
+Coffee       2.616e-02  1.312e-03  19.935   <2e-16 ***
+Copper      -1.344e+00  1.109e-01 -12.117   <2e-16 ***
+Cotton      -1.090e-02  4.706e-03  -2.315   0.0207 *  
+Dollar       8.993e-02  5.080e-03  17.702   <2e-16 ***
+Hogs         6.870e-03  4.298e-03   1.598   0.1101    
+Rice        -4.982e-03  3.089e-04 -16.129   <2e-16 ***
+Soybeans    -5.758e-03  5.585e-04 -10.309   <2e-16 ***
+Sugar        1.527e-01  1.826e-02   8.365   <2e-16 ***
+Wheat        7.786e-03  7.094e-04  10.976   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.216 on 2639 degrees of freedom
+Multiple R-squared:  0.7771,	Adjusted R-squared:  0.7762 
+F-statistic: 836.3 on 11 and 2639 DF,  p-value: < 2.2e-16
+
+
+
+$`Data Frame`
+           Fair Interest Current Interest Change (%) Number of Obs. Adjusted R^2
+2026-03-17         13.59             15.5     -13.15           2651         0.78
+```
+Table 2. Interest Rate Forecasting
