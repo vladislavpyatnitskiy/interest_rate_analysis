@@ -85,6 +85,8 @@ GMT
 ```
 Table 1. Historical Interest Rate Changes
 
+Here you can see the history of interest rates with start and end dates and period of hold. 
+
 ```
 $Regression
 $Regression$`Interest Rate`
@@ -124,3 +126,5 @@ $`Data Frame`
 2026-03-17         13.59             15.5     -13.15           2651         0.78
 ```
 Table 2. Interest Rate Forecasting
+
+The idea of the regression above is to answer the following question: "If Central Bank of Russia decides to change interest rate today, what the value of it will be?"
