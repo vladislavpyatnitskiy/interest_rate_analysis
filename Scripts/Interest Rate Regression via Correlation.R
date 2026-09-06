@@ -108,8 +108,6 @@ interest_regression_cor <- function(method="spearman", dataframe=F){
       "GF", "ZC", "SI", "PL", "PA"
     ), "=F", sep = "")]
     
-    v["ZR=F"] = v["ZR=F"] / 100
-    
     v <- c(v, as.numeric(rouble_df))
     
     df <- as.data.frame(v) # merge names with values
