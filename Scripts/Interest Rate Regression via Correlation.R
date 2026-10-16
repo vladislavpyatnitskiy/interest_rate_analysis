@@ -198,7 +198,7 @@ interest_regression_cor <- function(method="spearman", dataframe=F){
 
   l$var <- l[,1] * l[,2] # Sum Product of two columns
 
-  pot_return = round(log(round(sum(l[,3]) + g, 2) / p[nrow(p), 1]), 4) * 100
+  pot_return = round((round(sum(l[,3]) + g, 2) / p[nrow(p), 1]) - 1, 4) * 100
 
   reg <- list(R)
 
