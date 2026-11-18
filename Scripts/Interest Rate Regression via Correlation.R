@@ -81,9 +81,9 @@ interest_regression_cor <- function(method="spearman", dataframe=F){
     
     p <- read_html("https://finance.yahoo.com/quote/RUB=X/") %>%
       html_nodes('section') %>% html_nodes('div') %>% html_nodes('span') %>% 
-      html_text() %>% .[1]
+      html_text()
     
-    as.numeric(gsub(" ", "", p))
+    as.numeric(gsub(" ", "", p[grep("RUB=X   ", p) + 1]))
   }
   rouble_df <- rouble.yahoo()
   
@@ -108,7 +108,7 @@ interest_regression_cor <- function(method="spearman", dataframe=F){
       "GF", "ZC", "SI", "PL", "PA"
     ), "=F", sep = "")]
     
-    v <- c(v, as.numeric(rouble_df))
+    v <- c(v, rouble_df)
     
     df <- as.data.frame(v) # merge names with values
     
