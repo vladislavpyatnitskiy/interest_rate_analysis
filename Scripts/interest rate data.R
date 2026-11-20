@@ -1,9 +1,11 @@
 lapply(c("rvest", "timeSeries"), require, character.only = T) # Libs
 
-cbr_interest_rate <- function(s, e){
-
+cbr_interest_rate <- function(s, e=NULL){
+  
+  if (is.null(e)) e = as.Date(Sys.time())
+  
   if (as.Date(s, format = "%d.%m.%Y") < "2013-09-17") s = "17.09.2013"
- 
+  
   L <- sprintf(
     paste(
       "https://www.cbr.ru/eng/hd_base/KeyRate/",
@@ -18,7 +20,7 @@ cbr_interest_rate <- function(s, e){
   v <- data.frame(
     B[seq(from = 1, to = length(B), by = 2)],
     B[seq(from = 2, to = length(B), by = 2)]
-    )
+  )
   
   colnames(v) <- c("Date", "Interest Rate")
   
@@ -37,4 +39,4 @@ cbr_interest_rate <- function(s, e){
   
   as.timeSeries(v)
 }
-cbr_interest_rate("18.11.2024", "28.10.2025")
+cbr_interest_rate("18.11.2024")
